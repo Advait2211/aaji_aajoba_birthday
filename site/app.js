@@ -39,9 +39,9 @@
 
   /* ---------- poems ---------- */
   const HILITE = {
-    kana: (l, i, all) => i >= all.length - 2,
+    aajoba: (l, i, all) => i >= all.length - 2,
+    aaji: (l, i, all) => i >= all.length - 2,
     antar: (l) => l.trim() === "अंतर",
-    sansar: (l, i) => i === 0,
     natvanda: (l, i, all) => i >= all.length - 2,
   };
   $$("[data-poem]").forEach((el) => {

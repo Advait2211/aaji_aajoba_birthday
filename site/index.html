@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="mr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>आजी-आजोबा · वाढदिवसाच्या हार्दिक शुभेच्छा!</title>
+<meta name="description" content="आजोबांचा ७० वा आणि आजीचा ६७ वा वाढदिवस — सगळ्या नातवंडांकडून प्रेमपूर्वक.">
+<meta property="og:title" content="आजी-आजोबा · वाढदिवसाच्या हार्दिक शुभेच्छा! 🎂">
+<meta property="og:description" content="आजोबांचा ७० वा आणि आजीचा ६७ वा वाढदिवस — सगळ्या नातवंडांकडून प्रेमपूर्वक.">
+<meta property="og:image" content="img/full/p33.webp">
+<meta name="theme-color" content="#f4a300">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎂</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=Mukta:wght@400;500;700&family=Tiro+Devanagari+Marathi&family=Baloo+2:wght@600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ भेटवस्तू (intro) ============ -->
+<div id="gift" class="gift-screen" role="dialog" aria-label="भेट उघडा">
+  <div class="gift-sparkles" aria-hidden="true"></div>
+  <p class="gift-shri">॥ श्री ॥</p>
+  <p class="gift-line">आजी-आजोबांसाठी<br>एक छोटीशी भेट</p>
+  <button class="gift-box" id="giftBtn" aria-label="भेट उघडा">
+    <span class="gift-lid"><span class="gift-bow"></span></span>
+    <span class="gift-body"></span>
+  </button>
+  <p class="gift-tap">भेटवस्तूला स्पर्श करा 👆</p>
+</div>
+
+<!-- floating controls -->
+<div class="controls" aria-label="नियंत्रणे">
+  <button id="musicBtn" class="ctl" aria-label="संगीत" title="संगीत">🎵</button>
+  <button id="fontUp" class="ctl ctl-txt" aria-label="अक्षरे मोठी करा" title="अक्षरे मोठी">अ+</button>
+  <button id="fontDown" class="ctl ctl-txt" aria-label="अक्षरे लहान करा" title="अक्षरे लहान">अ−</button>
+  <button id="petalBtn" class="ctl" aria-label="फुलांचा वर्षाव" title="फुलांचा वर्षाव">🌸</button>
+</div>
+
+<canvas id="fx" aria-hidden="true"></canvas>
+<div id="petals" aria-hidden="true"></div>
+
+<main>
+  <!-- ============ Hero ============ -->
+  <header class="hero" id="top">
+    <svg class="toran" viewBox="0 0 1200 120" preserveAspectRatio="none" aria-hidden="true"></svg>
+    <div class="hero-inner">
+      <p class="shri">॥ श्री ॥</p>
+      <h1 class="hero-title">
+        <span class="t1">वाढदिवसाच्या</span>
+        <span class="t2">हार्दिक शुभेच्छा!</span>
+      </h1>
+      <p class="hero-sub">प्रिय आजी-आजोबा,<br>तुम्हा दोघांना उदंड आयुष्य, उत्तम आरोग्य आणि भरभरून आनंद लाभो!</p>
+
+      <div class="hero-frame reveal">
+        <img id="heroImg" alt="आजी आणि आजोबा" width="1200" height="1600">
+        <span class="frame-garland" aria-hidden="true"></span>
+      </div>
+
+      <div class="ages">
+        <div class="age-card reveal">
+          <span class="age-emoji" aria-hidden="true">👴🏽</span>
+          <span class="age-who">आजोबा</span>
+          <span class="age-num" data-to="70">०</span>
+          <span class="age-lbl">वा वाढदिवस</span>
+        </div>
+        <div class="age-heart" aria-hidden="true">❤️</div>
+        <div class="age-card reveal">
+          <span class="age-emoji" aria-hidden="true">👵🏽</span>
+          <span class="age-who">आजी</span>
+          <span class="age-num" data-to="67">०</span>
+          <span class="age-lbl">वा वाढदिवस</span>
+        </div>
+      </div>
+      <a class="scroll-hint" href="#aajoba">खाली सरकवा <span>⌄</span></a>
+    </div>
+    <div class="diyas" aria-hidden="true"></div>
+  </header>
+
+  <!-- ============ आजोबा ============ -->
+  <section class="person" id="aajoba">
+    <div class="sec-head reveal">
+      <span class="sec-emoji" aria-hidden="true">🙏</span>
+      <h2>आमचे आजोबा</h2>
+      <p class="sec-tag">घराचा कणा</p>
+    </div>
+    <div class="person-grid">
+      <figure class="polaroid tilt-l reveal">
+        <img id="aajobaImg" alt="आजोबा" loading="lazy">
+        <figcaption>आमचे लाडके आजोबा</figcaption>
+      </figure>
+      <div class="person-words reveal">
+        <p>आजोबा, तुमचा हात पाठीवर असला की कुठलीही अडचण मोठी वाटत नाही. तुमची शिस्त, तुमचा प्रामाणिकपणा आणि तुमचं ते मिश्कील हसू — हेच आमचं खरं धन आहे.</p>
+        <p>सत्तर वर्षांचा हा प्रवास म्हणजे कष्ट, प्रेम आणि माणसं जोडण्याची एक सुंदर गोष्ट आहे. <b>अमृतमहोत्सवाकडे</b> वाटचाल करताना तुम्हाला खूप खूप शुभेच्छा!</p>
+      </div>
+    </div>
+
+    <article class="poem-card reveal" aria-label="कणा — कुसुमाग्रज">
+      <p class="poem-kicker">आजोबांसाठी एक कविता</p>
+      <h3 class="poem-title">कणा</h3>
+      <div class="poem" data-poem="kana"></div>
+      <p class="poem-by">— कुसुमाग्रज</p>
+      <p class="poem-note">संसारात कितीही वादळं आली तरी कणा ताठ ठेवणारे, आणि आमच्या पाठीवर हात ठेवून “लढ” म्हणणारे — ते आमचे आजोबा! 💪</p>
+    </article>
+  </section>
+
+  <!-- ============ आजी ============ -->
+  <section class="person alt" id="aaji">
+    <div class="sec-head reveal">
+      <span class="sec-emoji" aria-hidden="true">🌼</span>
+      <h2>आमची आजी</h2>
+      <p class="sec-tag">घराचं हसू</p>
+    </div>
+    <div class="person-grid rev">
+      <figure class="polaroid tilt-r reveal">
+        <img id="aajiImg" alt="आजी" loading="lazy">
+        <figcaption>आमची गोड आजी</figcaption>
+      </figure>
+      <div class="person-words reveal">
+        <p>आजी, तुझ्या हातच्या भाकरीची चव, तुझ्या गोष्टी, तुझी माया आणि तुझ्या कवितांमधली गंमत — सगळं आमच्या मनात कायमचं कोरलेलं आहे.</p>
+        <p>सदुसष्टाव्या वाढदिवसाच्या खूप खूप शुभेच्छा! तू अशीच हसत राहा, लिहीत राहा आणि आम्हाला लाडावत राहा. 🥰</p>
+      </div>
+    </div>
+
+    <article class="poem-card reveal" aria-label="अरे संसार संसार — बहिणाबाई चौधरी">
+      <p class="poem-kicker">आजीसाठी एक कविता</p>
+      <h3 class="poem-title">अरे संसार संसार</h3>
+      <div class="poem" data-poem="sansar"></div>
+      <p class="poem-by">— बहिणाबाई चौधरी</p>
+      <p class="poem-note">चटके सोसून गोड भाकर वाढणारी, संसाराला ‘जिवाचा आधार’ करणारी — ती आमची आजी! 🌸</p>
+    </article>
+
+    <article class="aaji-kavita reveal" aria-label="आजीची कविता — अंतर">
+      <div class="notebook">
+        <p class="nb-kicker">✒️ आजीची स्वलिखित कविता</p>
+        <p class="nb-meta">कोंदण काव्य समूह · शिरोमणी काव्य</p>
+        <h3 class="nb-title">अंतर</h3>
+        <div class="nb-poem" data-poem="antar"></div>
+        <p class="nb-sign">स्वलिखित — आजी ✍️</p>
+      </div>
+      <p class="aaji-proud">आजी, तू कवयित्री आहेस याचा आम्हाला खूप अभिमान आहे! 👏</p>
+    </article>
+  </section>
+
+  <!-- ============ नातवंडांची कविता ============ -->
+  <section class="grandkids" id="natvanda">
+    <div class="sec-head reveal">
+      <span class="sec-emoji" aria-hidden="true">💌</span>
+      <h2>नातवंडांकडून…</h2>
+      <p class="sec-tag">आमच्या मनातलं, आमच्या शब्दांत</p>
+    </div>
+    <article class="letter reveal">
+      <h3 class="letter-title">तुमच्या सावलीत</h3>
+      <div class="poem letter-poem" data-poem="natvanda"></div>
+      <p class="letter-sign">— तुमची सगळी लाडकी नातवंडं ❤️</p>
+    </article>
+  </section>
+
+  <!-- ============ आठवणींचा प्रवास ============ -->
+  <section class="journey" id="journey">
+    <div class="sec-head reveal">
+      <span class="sec-emoji" aria-hidden="true">📸</span>
+      <h2>आठवणींचा प्रवास</h2>
+      <p class="sec-tag">वर्षानुवर्षे, हसत-खेळत</p>
+    </div>
+    <ol class="timeline" id="timeline"></ol>
+  </section>
+
+  <!-- ============ आपलं कुटुंब ============ -->
+  <section class="family" id="family">
+    <div class="sec-head reveal">
+      <span class="sec-emoji" aria-hidden="true">👨‍👩‍👧‍👦</span>
+      <h2>आपलं कुटुंब</h2>
+      <p class="sec-tag">एखाद्या चेहऱ्यावर स्पर्श करा — त्यांचे सगळे फोटो दिसतील</p>
+    </div>
+    <div class="chips" id="chips" role="tablist" aria-label="कुटुंबातील व्यक्ती"></div>
+    <p class="gallery-count" id="galleryCount" aria-live="polite"></p>
+    <div class="gallery" id="gallery"></div>
+    <div class="gallery-actions">
+      <button class="btn" id="slideshowBtn">▶️ सगळे फोटो चलचित्रासारखे पाहा</button>
+    </div>
+  </section>
+
+  <!-- ============ केक ============ -->
+  <section class="cake-sec" id="cake">
+    <div class="sec-head reveal">
+      <span class="sec-emoji" aria-hidden="true">🎂</span>
+      <h2>चला, केक कापूया!</h2>
+      <p class="sec-tag">मेणबत्त्या विझवण्यासाठी फुंकर मारा</p>
+    </div>
+    <div class="cakes">
+      <div class="cake-wrap">
+        <div class="cake" data-cake="aajoba">
+          <div class="candles"><span class="candle-num">७०</span></div>
+          <div class="tier t-top"></div>
+          <div class="tier t-mid"></div>
+          <div class="tier t-bot"></div>
+          <div class="plate"></div>
+        </div>
+        <p class="cake-name">आजोबा</p>
+      </div>
+      <div class="cake-wrap">
+        <div class="cake" data-cake="aaji">
+          <div class="candles"><span class="candle-num">६७</span></div>
+          <div class="tier t-top"></div>
+          <div class="tier t-mid"></div>
+          <div class="tier t-bot"></div>
+          <div class="plate"></div>
+        </div>
+        <p class="cake-name">आजी</p>
+      </div>
+    </div>
+    <div class="cake-actions">
+      <button class="btn btn-big" id="blowBtn">🌬️ फुंकर मारा!</button>
+      <button class="btn btn-soft" id="micBtn">🎤 खरोखर फुंकर मारा (माइक)</button>
+    </div>
+    <p class="mic-hint" id="micHint" hidden>फोनच्या माइकजवळ जोरात फुंकर मारा… 🌬️</p>
+    <div class="cake-wish" id="cakeWish" hidden>
+      <p class="cw1">हिप हिप हुर्रे! 🎉</p>
+      <p class="cw2">वाढदिवसाच्या खूप खूप शुभेच्छा, आजी-आजोबा!</p>
+      <button class="btn btn-soft" id="relightBtn">🕯️ पुन्हा मेणबत्त्या लावा</button>
+    </div>
+  </section>
+
+  <!-- ============ आकाशकंदील / आशीर्वाद ============ -->
+  <section class="sky" id="sky">
+    <div class="stars" aria-hidden="true"></div>
+    <div class="sec-head reveal">
+      <span class="sec-emoji" aria-hidden="true">🏮</span>
+      <h2>शुभेच्छांचे आकाशकंदील</h2>
+      <p class="sec-tag">आकाशात कुठेही स्पर्श करा — एक एक शुभेच्छा आकाशात उडेल</p>
+    </div>
+    <div class="lantern-field" id="lanternField" role="button" tabindex="0" aria-label="आकाशकंदील सोडा"></div>
+    <div class="finale reveal">
+      <p class="finale-1">तुमच्यामुळेच आम्ही आहोत.</p>
+      <p class="finale-2">शतायुषी भव! 🙏</p>
+      <p class="finale-3">तुमचं संपूर्ण कुटुंब<br>आणि सगळी नातवंडं ❤️</p>
+      <a class="btn btn-soft" href="#top">⬆️ पुन्हा सुरुवातीपासून</a>
+    </div>
+  </section>
+</main>
+
+<!-- lightbox -->
+<div class="lightbox" id="lightbox" hidden role="dialog" aria-label="फोटो">
+  <button class="lb-close" id="lbClose" aria-label="बंद करा">✕</button>
+  <button class="lb-nav lb-prev" id="lbPrev" aria-label="मागचा फोटो">‹</button>
+  <figure class="lb-fig">
+    <img id="lbImg" alt="">
+    <figcaption id="lbCap"></figcaption>
+  </figure>
+  <button class="lb-nav lb-next" id="lbNext" aria-label="पुढचा फोटो">›</button>
+  <button class="lb-play" id="lbPlay" aria-label="चलचित्र">⏸️</button>
+</div>
+
+<script src="data/photos.js"></script>
+<script src="poems.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

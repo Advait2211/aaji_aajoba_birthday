@@ -1,0 +1,14 @@
+# Original photos and texts stay local (GPS in EXIF, phone number in rtf)
+/*.jpg
+/*.JPG
+/*.jpeg
+/*.HEIC
+/*.heic
+/*.rtf
+# Face embeddings and the review sheet (biometric data)
+tools/faces.json
+tools/face_clusters.jpg
+tools/work/
+.DS_Store
+.vercel
+__pycache__/
